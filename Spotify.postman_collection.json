@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "546ac024-76c4-4a1b-979a-fb981ff2ac40",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authorize",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/authorize",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authorize"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/authorize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authorize"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Apr 2021 04:07:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "https://accounts.spotify.com:443/authorize?client_id=63e8dd5dc35f421abdf2a6ba60d4d9a2&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Fspotify-redirect&scope=playlist-modify-private+user-read-email"
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/me",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 13 Apr 2021 04:10:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"birthdate\": null,\n    \"country\": null,\n    \"displayName\": \"Hasintha Abeykoon\",\n    \"email\": \"hasinthaabeykoon@gmail.com\",\n    \"externalUrls\": {\n        \"externalUrls\": {\n            \"spotify\": \"https://open.spotify.com/user/31rsyilzsltnlweqgspso5zqjjwy\"\n        }\n    },\n    \"followers\": {\n        \"href\": null,\n        \"total\": 0\n    },\n    \"href\": \"https://api.spotify.com/v1/users/31rsyilzsltnlweqgspso5zqjjwy\",\n    \"id\": \"31rsyilzsltnlweqgspso5zqjjwy\",\n    \"images\": [\n        {\n            \"height\": null,\n            \"url\": \"https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=3887730424627234&height=300&width=300&ext=1620871792&hash=AeSV92V8MYsjMWa9XFA\",\n            \"width\": null\n        }\n    ],\n    \"product\": null,\n    \"type\": \"USER\",\n    \"uri\": \"spotify:user:31rsyilzsltnlweqgspso5zqjjwy\"\n}"
+				}
+			]
+		}
+	]
+}
